@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1B66F4295E4B7700CF3916 /* overviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B66F3295E4B7700CF3916 /* overviewVC.swift */; };
+		9B1B66F7295EB19B00CF3916 /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = 9B1B66F6295EB19B00CF3916 /* Numerics */; };
 		9B2B0208295A3A8E005DF6BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B0207295A3A8E005DF6BE /* AppDelegate.swift */; };
 		9B2B020A295A3A8E005DF6BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B0209295A3A8E005DF6BE /* SceneDelegate.swift */; };
 		9B2B020C295A3A8E005DF6BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B020B295A3A8E005DF6BE /* ViewController.swift */; };
@@ -14,9 +16,14 @@
 		9B2B0212295A3A8E005DF6BE /* MentalMathTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B2B0210295A3A8E005DF6BE /* MentalMathTrainer.xcdatamodeld */; };
 		9B2B0214295A3A8F005DF6BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B2B0213295A3A8F005DF6BE /* Assets.xcassets */; };
 		9B2B0217295A3A8F005DF6BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B2B0215295A3A8F005DF6BE /* LaunchScreen.storyboard */; };
+		9B49EE45295A45F0003AA0FF /* operationControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49EE44295A45F0003AA0FF /* operationControl.swift */; };
+		9B49EE48295A8EF7003AA0FF /* selectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49EE47295A8EF7003AA0FF /* selectorVC.swift */; };
+		9B49EE4A295A9ADD003AA0FF /* algebraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B49EE49295A9ADD003AA0FF /* algebraVC.swift */; };
+		9B70C152295D2C690083476A /* interSelectorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B70C151295D2C690083476A /* interSelectorVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9B1B66F3295E4B7700CF3916 /* overviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = overviewVC.swift; sourceTree = "<group>"; };
 		9B2B0204295A3A8E005DF6BE /* MentalMathTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentalMathTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2B0207295A3A8E005DF6BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B2B0209295A3A8E005DF6BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +33,10 @@
 		9B2B0213295A3A8F005DF6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B2B0216295A3A8F005DF6BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B2B0218295A3A8F005DF6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B49EE44295A45F0003AA0FF /* operationControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = operationControl.swift; sourceTree = "<group>"; };
+		9B49EE47295A8EF7003AA0FF /* selectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectorVC.swift; sourceTree = "<group>"; };
+		9B49EE49295A9ADD003AA0FF /* algebraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = algebraVC.swift; sourceTree = "<group>"; };
+		9B70C151295D2C690083476A /* interSelectorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = interSelectorVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B1B66F7295EB19B00CF3916 /* Numerics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,14 +72,27 @@
 			children = (
 				9B2B0207295A3A8E005DF6BE /* AppDelegate.swift */,
 				9B2B0209295A3A8E005DF6BE /* SceneDelegate.swift */,
-				9B2B020B295A3A8E005DF6BE /* ViewController.swift */,
 				9B2B020D295A3A8E005DF6BE /* Main.storyboard */,
 				9B2B0213295A3A8F005DF6BE /* Assets.xcassets */,
 				9B2B0215295A3A8F005DF6BE /* LaunchScreen.storyboard */,
 				9B2B0218295A3A8F005DF6BE /* Info.plist */,
 				9B2B0210295A3A8E005DF6BE /* MentalMathTrainer.xcdatamodeld */,
+				9B49EE44295A45F0003AA0FF /* operationControl.swift */,
+				9B49EE46295A4713003AA0FF /* ViewControllers */,
 			);
 			path = MentalMathTrainer;
+			sourceTree = "<group>";
+		};
+		9B49EE46295A4713003AA0FF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9B2B020B295A3A8E005DF6BE /* ViewController.swift */,
+				9B49EE47295A8EF7003AA0FF /* selectorVC.swift */,
+				9B70C151295D2C690083476A /* interSelectorVC.swift */,
+				9B49EE49295A9ADD003AA0FF /* algebraVC.swift */,
+				9B1B66F3295E4B7700CF3916 /* overviewVC.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +111,9 @@
 			dependencies = (
 			);
 			name = MentalMathTrainer;
+			packageProductDependencies = (
+				9B1B66F6295EB19B00CF3916 /* Numerics */,
+			);
 			productName = MentalMathTrainer;
 			productReference = 9B2B0204295A3A8E005DF6BE /* MentalMathTrainer.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +142,9 @@
 				Base,
 			);
 			mainGroup = 9B2B01FB295A3A8E005DF6BE;
+			packageReferences = (
+				9B1B66F5295EB19B00CF3916 /* XCRemoteSwiftPackageReference "swift-numerics" */,
+			);
 			productRefGroup = 9B2B0205295A3A8E005DF6BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,9 +172,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B49EE45295A45F0003AA0FF /* operationControl.swift in Sources */,
+				9B49EE48295A8EF7003AA0FF /* selectorVC.swift in Sources */,
+				9B70C152295D2C690083476A /* interSelectorVC.swift in Sources */,
 				9B2B020C295A3A8E005DF6BE /* ViewController.swift in Sources */,
 				9B2B0208295A3A8E005DF6BE /* AppDelegate.swift in Sources */,
+				9B1B66F4295E4B7700CF3916 /* overviewVC.swift in Sources */,
 				9B2B0212295A3A8E005DF6BE /* MentalMathTrainer.xcdatamodeld in Sources */,
+				9B49EE4A295A9ADD003AA0FF /* algebraVC.swift in Sources */,
 				9B2B020A295A3A8E005DF6BE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,8 +333,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +343,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonathano.MentalMathTrainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,8 +365,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,9 +375,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jonathano.MentalMathTrainer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -362,6 +406,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B1B66F5295EB19B00CF3916 /* XCRemoteSwiftPackageReference "swift-numerics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-numerics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9B1B66F6295EB19B00CF3916 /* Numerics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B1B66F5295EB19B00CF3916 /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = Numerics;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9B2B0210295A3A8E005DF6BE /* MentalMathTrainer.xcdatamodeld */ = {
