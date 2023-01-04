@@ -50,18 +50,20 @@ class algebraVC: UIViewController {
     
     
     @IBAction func nextButton(_ sender: UIButton) {
-      if (q != numQuestions) {
-        if !(answerField.text!.isEmpty) {
-          checkAnswer(a: answerField.text!)
-          setNumbers()
-          questionNumber.text = "Question Number: \(q)"
-        } else {
-          print("Answer field is empty")
-        }
-      } else {
-        print("congrats")
-      }
-      answerField.text = ""
+        
+        if (q != numQuestions) {
+            if !(answerField.text!.isEmpty) {
+              checkAnswer(a: answerField.text!)
+              setNumbers()
+              questionNumber.text = "Question Number: \(q)"
+            } else {
+              print("Answer field is empty")
+            }
+          } else {
+            print("congrats")
+          }
+          answerField.text = ""
+        
     }
     
     @IBAction func dismissButton(_ sender: UIButton) {
@@ -122,15 +124,14 @@ class algebraVC: UIViewController {
     
     
     
-    var randomTen: () -> Float {
+    var randomTen: () -> Double {
         get {
             return {
                 var x = 1
                 for _ in 1...Int.random(in: 1...self.numDigits!) {
                     x *= 10
-                    print(x)
                 }
-                return Float(x)
+                return Double(x)
             }
         }
     }
@@ -165,14 +166,19 @@ class algebraVC: UIViewController {
                 let b = Int.random(in: 1...c)
                 leftNum.text = String(a)
                 rightNum.text = String(b)
-                correctAnswer = String(Float(a+b))
+                correctAnswer = String(Double(a+b))
                 
             } else {
-                let a = Float(Int.random(in: 1...c))
-                let b = Float(Int.random(in: 1...c))
-                leftNum.text = String(a/randomTen())
-                rightNum.text = String(b/randomTen())
-                correctAnswer = String(a+b)
+                var a = Double(Int.random(in: 1...c))
+                var b = Double(Int.random(in: 1...c))
+                a = a/randomTen()
+                b = b/randomTen()
+                leftNum.text = String(a)
+                rightNum.text = String(b)
+                correctAnswer = String(format: "%.6f", Double(a+b))
+                print(a)
+                print(b)
+                print(correctAnswer!)
             }
             
         } else if (operation! == "Subtraction") {
@@ -181,13 +187,15 @@ class algebraVC: UIViewController {
                 let b = Int.random(in: 1...c)
                 leftNum.text = String(a)
                 rightNum.text = String(b)
-                correctAnswer = String(Float(a-b))
+                correctAnswer = String(Double(a-b))
             } else {
-                let a = Float(Int.random(in: 1...c))
-                let b = Float(Int.random(in: 1...c))
-                leftNum.text = String(a/randomTen())
-                rightNum.text = String(b/randomTen())
-                correctAnswer = String(Float(a-b))
+                var a = Double(Int.random(in: 1...c))
+                var b = Double(Int.random(in: 1...c))
+                a = a/randomTen()
+                b = b/randomTen()
+                leftNum.text = String(a)
+                rightNum.text = String(b)
+                correctAnswer = String(format: "%.6f", Double(a-b))
             }
         } else if (operation! == "Multiplication") {
             if (hasDecimals == false) {
@@ -195,13 +203,15 @@ class algebraVC: UIViewController {
                 let b = Int.random(in: 1...c)
                 leftNum.text = String(a)
                 rightNum.text = String(b)
-                correctAnswer = String(Float(a*b))
+                correctAnswer = String(Double(a*b))
             } else {
-                let a = Float(Int.random(in: 1...c))
-                let b = Float(Int.random(in: 1...c))
-                leftNum.text = String(a/randomTen())
-                rightNum.text = String(b/randomTen())
-                correctAnswer = String(Float(a*b))
+                var a = Double(Int.random(in: 1...c))
+                var b = Double(Int.random(in: 1...c))
+                a = a/randomTen()
+                b = b/randomTen()
+                leftNum.text = String(a)
+                rightNum.text = String(b)
+                correctAnswer = String(format: "%.6f", Double(a*b))
             }
         } else if (operation! == "Division") {
             if (hasDecimals == false) {
@@ -219,13 +229,14 @@ class algebraVC: UIViewController {
              
              } else {
                  while true {
-                     let a = Float(Int.random(in: 1...c))
-                     let b = Float(Int.random(in: 1...c))
+                     var a = Double(Int.random(in: 1...c))
+                     var b = Double(Int.random(in: 1...c))
                      if (a/b).truncatingRemainder(dividingBy: 1) == 0 {
-                         correctAnswer = String(a/b)
-                         leftNum.text = String(a/randomTen())
-                         rightNum.text = String(b/randomTen())
-                         print(correctAnswer!)
+                         a = a/randomTen()
+                         b = b/randomTen()
+                         leftNum.text = String(a)
+                         rightNum.text = String(b)
+                         correctAnswer = String(format: "%.6f", Double(a/b))
                          break
                      }
                  }
@@ -236,18 +247,18 @@ class algebraVC: UIViewController {
     }
     
     func checkAnswer(a: String!) {
-        
-        let u = String(Float(a)!)
-        if (u == correctAnswer!) {
-            print("correct!")
-            k += 1
-        } else {
-            print("wrong!")
-            k += 0
+            let x = Double(a)!
+            let u = String(format: "%.6f", x)
+            if (u == correctAnswer!) {
+                print("correct!")
+                k += 1
+            } else {
+                print("wrong!")
+                k += 0
+            }
+            correctNumber.text = "\(k)/\(q) Right!"
+            q += 1
         }
-        correctNumber.text = "\(k)/\(q) Right!"
-        q += 1
-    }
     
     
     
