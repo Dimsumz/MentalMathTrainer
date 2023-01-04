@@ -22,6 +22,13 @@ class selectorVC: UIViewController {
     }
     
     
+    @IBOutlet weak var greyBack: UIImageView!
+    
+    override func viewDidLoad() {
+        greyBack.alpha = 0.7
+    }
+    
+    
     
     
 }

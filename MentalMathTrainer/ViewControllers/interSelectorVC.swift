@@ -31,6 +31,18 @@ class interSelectorVC: UIViewController {
         numDigits.text = String(Int(digitStepper.value))
     }
     
+    @IBOutlet weak var greyBack1: UIImageView!
+    @IBOutlet weak var greyBack2: UIImageView!
+    @IBOutlet weak var greyBack3: UIImageView!
+    
+    
+    override func viewDidLoad() {
+        greyBack1.alpha = 0.8
+        greyBack2.alpha = 0.8
+        greyBack3.alpha = 0.8
+
+    }
+    
     // SLIDER CODE
     
     @IBOutlet weak var numQuestions: UILabel!

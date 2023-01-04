@@ -50,16 +50,18 @@ class algebraVC: UIViewController {
     
     
     @IBAction func nextButton(_ sender: UIButton) {
-        
-        if (q != numQuestions) {
-            checkAnswer(a: answerField.text!)
-            setNumbers()
-            questionNumber.text = "Question Number: \(q)"
+      if (q != numQuestions) {
+        if !(answerField.text!.isEmpty) {
+          checkAnswer(a: answerField.text!)
+          setNumbers()
+          questionNumber.text = "Question Number: \(q)"
         } else {
-            print("congrats")
+          print("Answer field is empty")
         }
-        answerField.text = ""
-        
+      } else {
+        print("congrats")
+      }
+      answerField.text = ""
     }
     
     @IBAction func dismissButton(_ sender: UIButton) {
@@ -163,7 +165,7 @@ class algebraVC: UIViewController {
                 let b = Int.random(in: 1...c)
                 leftNum.text = String(a)
                 rightNum.text = String(b)
-                correctAnswer = String(a+b)
+                correctAnswer = String(Float(a+b))
                 
             } else {
                 let a = Float(Int.random(in: 1...c))
@@ -179,13 +181,13 @@ class algebraVC: UIViewController {
                 let b = Int.random(in: 1...c)
                 leftNum.text = String(a)
                 rightNum.text = String(b)
-                correctAnswer = String(a-b)
+                correctAnswer = String(Float(a-b))
             } else {
                 let a = Float(Int.random(in: 1...c))
                 let b = Float(Int.random(in: 1...c))
                 leftNum.text = String(a/randomTen())
                 rightNum.text = String(b/randomTen())
-                correctAnswer = String(a-b)
+                correctAnswer = String(Float(a-b))
             }
         } else if (operation! == "Multiplication") {
             if (hasDecimals == false) {
@@ -193,13 +195,13 @@ class algebraVC: UIViewController {
                 let b = Int.random(in: 1...c)
                 leftNum.text = String(a)
                 rightNum.text = String(b)
-                correctAnswer = String(a*b)
+                correctAnswer = String(Float(a*b))
             } else {
                 let a = Float(Int.random(in: 1...c))
                 let b = Float(Int.random(in: 1...c))
                 leftNum.text = String(a/randomTen())
                 rightNum.text = String(b/randomTen())
-                correctAnswer = String(a*b)
+                correctAnswer = String(Float(a*b))
             }
         } else if (operation! == "Division") {
             if (hasDecimals == false) {
@@ -210,7 +212,7 @@ class algebraVC: UIViewController {
                         correctAnswer = String(a/b)
                         leftNum.text = String(a)
                         rightNum.text = String(b)
-                        print(a/b)
+                        print(correctAnswer!)
                         break
                     }
                 }
@@ -223,7 +225,7 @@ class algebraVC: UIViewController {
                          correctAnswer = String(a/b)
                          leftNum.text = String(a/randomTen())
                          rightNum.text = String(b/randomTen())
-                         print(a/b)
+                         print(correctAnswer!)
                          break
                      }
                  }
@@ -235,7 +237,8 @@ class algebraVC: UIViewController {
     
     func checkAnswer(a: String!) {
         
-        if (a! == correctAnswer!) {
+        let u = String(Float(a)!)
+        if (u == correctAnswer!) {
             print("correct!")
             k += 1
         } else {
